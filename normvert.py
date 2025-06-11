@@ -4,12 +4,12 @@ from scipy.stats import norm
 
 # Parameter der normalverteilung  
 # mittelwert μ
-mu = 166 # erwartungswert = mittelwert für körpergröße Frauen Deutschland 
+mu = 166 # erwartungswert = mittelwert (Körpergröße Frauen Deutschland )
 sigma = 10 # Standardabweichung
 
 # Dichtefunktion, also hier Normalverteilung 
 x = np.linspace(mu - 4 * sigma, mu + 4 * sigma, 1000) 
-pdf = norm.pdf(x, mu, sigma) # Achtung pdf nichts mit pdf zu, steht für PROPABILITY DENSITY FUNCTION (WahrscheinlichkeitsDichteFunktion)
+pdf = norm.pdf(x, mu, sigma) # PROPABILITY DENSITY FUNCTION (Wahrscheinlichkeitsdichtefunktion)
 
 # Wahrscheinlichkeit P(X >= 180)
 x_threshold = 180
