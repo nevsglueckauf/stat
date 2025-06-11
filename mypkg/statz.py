@@ -10,10 +10,12 @@ class StatPy:
     def mode(lst:list):
         """ Berechnet den Modus 
         Args:
-            lst (list): iste mit Zahlen, deren Modus/Modi ermittelt werden soll
+            lst (list): Liste mit Zahlen, deren Modus/Modi ermittelt werden soll
 
         Returns:
             _type_: _description_
+            
+        FIXME test auf mehrfache modi! 
         """
         ctd = Counter(lst)
         
@@ -45,7 +47,7 @@ class StatPy:
         
     @staticmethod
     def avg(lst:list) ->float:
-        """ Berechnet das arithmetische Mittel
+        """ Berechnet das arithmetische Mittel (average, arithmetic mean)
 
         Args:
             lst (list): Liste mit Zahlen, deren Mittel ermittelt werden soll
@@ -57,7 +59,7 @@ class StatPy:
     
     @staticmethod
     def rel_freq(dta:list)->dict:
-        """ Berechnet die relative Häufigkeit
+        """ Berechnet die relative Häufigkeit (relative frequency)
 
         Args:
             dta (list): Liste mit Werten 
@@ -70,17 +72,26 @@ class StatPy:
     
     @staticmethod
     def std_dev(lst: list)->float:
-        """ Berechent die Standardabweichung (standard deviation)
+        """ Berechnet die Standardabweichung (standard deviation)
 
         Args:
             lst (list): Liste mit Werten
 
         Returns:
-            float: sigma (σ)
+            float:  σ (sigma)
         """
         return sqrt(StatPy.var(lst))
     
+    @staticmethod
     def var(lst:list) ->float:
+        """ Berechnet die Varianz (variance)
+ 
+        Args:
+            lst (list): _description_
+
+        Returns:
+            float: _description_
+        """
         mean = sum(lst) / len(lst)
         return sum((x - mean) ** 2 for x in lst) / (len(lst) - 1)
     
