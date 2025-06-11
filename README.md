@@ -1,5 +1,5 @@
 # stat
-Numerik- und Statistik-Foo
+Statistik-Foo
 
 
 ## Variablenbezeichner

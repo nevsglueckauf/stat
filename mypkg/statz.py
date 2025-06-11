@@ -14,5 +14,5 @@ class StatPy:
         Returns:
             dict: {'val_1': rl_frq_1, ... 'val_n': rl_frq_n'}
         """
-        l = len(dta)
+        l = len(dta) # Länge nur 1 x berechnen
         return {k:round(v/l, 2) for (k,v) in Counter(dta).items()}
