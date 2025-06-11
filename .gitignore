@@ -1,7 +1,6 @@
 # local only stuff
 tmp/
 .DS_Store
-ta/
 .venv/
 __pycache__/
 # lang other than python or 3rd party stuff

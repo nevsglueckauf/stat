@@ -1,0 +1,27 @@
+Die folgende Liste enthält deine Handyrechnungen über 6 Monate:
+
+bills = 29.99, 29.99, 32.47, 29.99, 47.63, 31.12]
+
+Berechne händisch mit Angabe des Lösungsweges sowohl den Mittelwert als auch den Median deiner monatlichen Mobilfunkkosten.
+
+bills.sort() # [29.99, 29.99, 29.99, 29.99, 31.12, 32.47, 47.63]
+
+
+def clc_med(mylist:list):
+    """ Median „zu Fuß“ berechnen """
+    mylist.sort()
+    mid = len(mylist) // 2
+    if len(mylist) % 2 == 0:
+        return sum(mylist[mid-1:mid+1]) / 2
+    else:
+        return mylist[mid]
+
+bills = [29.99, 29.99, 32.47, 29.99, 47.63, 31.12]
+print(clc_med(bills))
+
+# 30.555
+
+# Zum Vergleich
+import statistics
+print(statistics.median(bills))
+# 30.555
