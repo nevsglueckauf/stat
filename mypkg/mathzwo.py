@@ -24,3 +24,4 @@ class MathZwo:
     @staticmethod
     def clc_avg(lst:list) ->float:
         return sum(lst) / len(lst)
+    
