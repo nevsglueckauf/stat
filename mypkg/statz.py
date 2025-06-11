@@ -35,7 +35,7 @@ class StatPy:
             lst (list): Liste mit Zahlen, deren Median ermittelt werden soll
 
         Returns:
-            _type_: Median (auch: Zentralwert)
+            _type_: Median (auch: Zentralwert
         """
         lst.sort()
         mid = len(lst) // 2
