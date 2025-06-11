@@ -1,13 +1,13 @@
 # AUTHOR Sven Schrodt
 # SINCE 2025-06-11
 from collections import Counter
-
+from math import sqrt
 class StatPy:
-    """ Ein wenig Spielerei mit Statistik ohne weitere Libs (außer collections 😎)
+    """ Ein wenig Spielerei mit Statistik ohne weitere Libs (außer collections und math.sqrt 😎)
     
     """
     @staticmethod
-    def clc_mode(lst:list):
+    def mode(lst:list):
         """ Berechnet den Modus 
         Args:
             lst (list): iste mit Zahlen, deren Modus/Modi ermittelt werden soll
@@ -26,7 +26,7 @@ class StatPy:
         return max_id
     
     @staticmethod
-    def clc_med(lst:list) ->float:
+    def med(lst:list) ->float:
         """ Median berechnen
 
         Args:
@@ -44,7 +44,7 @@ class StatPy:
         
         
     @staticmethod
-    def clc_avg(lst:list) ->float:
+    def avg(lst:list) ->float:
         """ Berechnet das arithmetische Mittel
 
         Args:
@@ -68,4 +68,21 @@ class StatPy:
         l = len(dta) # Länge nur 1 x berechnen
         return {k:round(v/l, 2) for (k,v) in Counter(dta).items()}
     
+    @staticmethod
+    def std_dev(lst: list)->float:
+        """ Berechent die Standardabweichung (standard deviation)
 
+        Args:
+            lst (list): Liste mit Werten
+
+        Returns:
+            float: sigma (σ)
+        """
+        return sqrt(StatPy.var(lst))
+    
+    def var(lst:list) ->float:
+        mean = sum(lst) / len(lst)
+        return sum((x - mean) ** 2 for x in lst) / (len(lst) - 1)
+    
+    
+    
