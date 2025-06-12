@@ -2,8 +2,10 @@
 # SINCE 2025-06-11
 from collections import Counter
 from math import sqrt
-class StatPy:
+
+class StatzAfoot:
     """ Ein wenig Spielerei mit Statistik ohne weitere Libs (außer collections und math.sqrt 😎)
+        - afoot („zu Fuß“ halt)
     
     """
     @staticmethod
@@ -80,7 +82,7 @@ class StatPy:
         Returns:
             float:  σ (sigma)
         """
-        return sqrt(StatPy.var(lst))
+        return sqrt(StatzAfoot.var(lst))
     
     @staticmethod
     def var(lst:list) ->float:

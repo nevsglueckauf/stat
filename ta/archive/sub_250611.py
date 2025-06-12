@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import statistics
-from mypkg.statz import StatPy
+from mypkg.statz import StatzAfoot
 
 def clc_avg(dta:list) ->float:
     return  sum(dta) / len(dta)
@@ -32,7 +32,7 @@ for k,v  in rel.items():
 
 print(rel)
 
-sp = StatPy()
+sp = StatzAfoot()
 
 print(sp.rel_freq(fav_tec))
 
