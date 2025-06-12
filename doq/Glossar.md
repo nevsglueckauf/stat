@@ -59,8 +59,8 @@ Anteil eines Merkmals an der Gesamtzahl (%-uales Vorkommen)
 <dd>
 $ R = x_{max} - x_{min} $
 
-    - $$ R = x_max - x_min $$
-    - $$f(x) = \sqrt[3]{2x} + \sqrt{x-2}$$
+    - $ R = x_{max} - x_{min} $
+    
 
 </dd>    
 

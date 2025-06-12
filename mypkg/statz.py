@@ -32,9 +32,9 @@ class StatzAfoot:
             _type_: Median (auch: Zentralwert
         """
         lst.sort() # sortiere die Werte
-        mid = len(lst) // 2 # finde die Mitte (absolut, oder erstes Element, falls gerade)
+        mid = len(lst) // 2 # finde die Mitte (absolut, oder erstes Element, falls gerade Anzahl an Elementen)
         if len(lst) % 2 == 0: # gerade Anzahl an Elementen
-            return sum(lst[mid-1:mid+1]) / 2 # slice für die Mitte 
+            return sum(lst[mid-1:mid+1]) / 2 # slice für die Mitte - wenn gerade Anzahl an Elementen
         else: # ungerade Anzahl an Elementen
             return lst[mid]
         
@@ -56,7 +56,7 @@ class StatzAfoot:
         """ Berechnet die relative Häufigkeit (relative frequency)
 
         Args:
-            dta (list): Liste mit Werten 
+            dta (list): Liste mit Werten
 
         Returns:
             dict: {'val_1': rl_frq_1, ... 'val_n': rl_frq_n'}
@@ -81,10 +81,10 @@ class StatzAfoot:
         """ Berechnet die Varianz (variance)
  
         Args:
-            lst (list): _description_
+            lst (list): Liste mit Werten
 
         Returns:
-            float: _description_
+            float: σ^2 (sigma^2)
         """
         mean = StatzAfoot.avg(lst) # Mittel nur 1 x berechnen
         return sum((x - mean) ** 2 for x in lst) / (len(lst) - 1)
@@ -92,6 +92,12 @@ class StatzAfoot:
     @staticmethod
     def st_rng(lst:list) ->float:
         """ Berechnet die Spannweite (statistics range)
+
+        Args:
+            lst (list): Liste mit Werten
+
+        Returns:
+            float: R (= x_{max} - x_{min})
         """
         return max(list) - min(lst)
         
