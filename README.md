@@ -26,4 +26,4 @@ Erledigte 'wandern' zu ```ta/archive```
 - numpy
 - matplotlib
 - pandas 
-
+- scipy
