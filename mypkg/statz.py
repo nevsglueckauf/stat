@@ -15,7 +15,7 @@ class StatzAfoot:
             lst (list): Liste mit Zahlen, deren Modus/Modi ermittelt werden soll
 
         Returns:
-            _type_: list of values, occuring the most in dta
+            _type_: Liste von Werten, die am häufigsten in dta vorkommen
         """
         ctd = Counter(lst)
         max_id = max(ctd.values())
@@ -29,7 +29,7 @@ class StatzAfoot:
             lst (list): Liste mit Zahlen, deren Median ermittelt werden soll
 
         Returns:
-            _type_: Median (auch: Zentralwert
+            _type_: Median (auch: Zentralwert)
         """
         lst.sort() # sortiere die Werte
         mid = len(lst) // 2 # finde die Mitte (absolut, oder erstes Element, falls gerade Anzahl an Elementen)
@@ -56,7 +56,7 @@ class StatzAfoot:
         """ Berechnet die relative Häufigkeit (relative frequency)
 
         Args:
-            dta (list): Liste mit Werten
+            dta (list): Liste von Werten
 
         Returns:
             dict: {'val_1': rl_frq_1, ... 'val_n': rl_frq_n'}
@@ -69,7 +69,7 @@ class StatzAfoot:
         """ Berechnet die Standardabweichung (standard deviation)
 
         Args:
-            lst (list): Liste mit Werten
+            lst (list): Liste von Werten
 
         Returns:
             float:  σ (sigma)
@@ -81,7 +81,7 @@ class StatzAfoot:
         """ Berechnet die Varianz (variance)
  
         Args:
-            lst (list): Liste mit Werten
+            lst (list): Liste von Werten
 
         Returns:
             float: σ^2 (sigma^2)
@@ -94,7 +94,7 @@ class StatzAfoot:
         """ Berechnet die Spannweite (statistics range)
 
         Args:
-            lst (list): Liste mit Werten
+            lst (list): Liste von Werten
 
         Returns:
             float: R (= x_{max} - x_{min})
