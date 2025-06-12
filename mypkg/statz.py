@@ -31,10 +31,10 @@ class StatzAfoot:
         Returns:
             _type_: Median (auch: Zentralwert
         """
-        lst.sort()
-        mid = len(lst) // 2
+        lst.sort() # sortiere die Werte
+        mid = len(lst) // 2 # finde die Mitte (absolut, oder erstes Element, falls gerade)
         if len(lst) % 2 == 0: # gerade Anzahl an Elementen
-            return sum(lst[mid-1:mid+1]) / 2
+            return sum(lst[mid-1:mid+1]) / 2 # slice für die Mitte 
         else: # ungerade Anzahl an Elementen
             return lst[mid]
         
