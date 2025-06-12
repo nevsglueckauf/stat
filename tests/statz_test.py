@@ -13,7 +13,9 @@ class TestStatzAfoot(unittest.TestCase):
         median_stat = statistics.median(income)
         avg = StatzAfoot.avg(income)
         avg_stat = statistics.mean(income)
-        mode = StatzAfoot.mode(income)
+        mode = StatzAfoot.mode(income) 
+        if len(mode)==1:
+            mode = mode[0]
         mode_stat = statistics.mode(income)
         self.assertEqual(median_stat, median_stat, "Fehler!")
         self.assertEqual(avg_stat, avg_stat, "Fehler!")
