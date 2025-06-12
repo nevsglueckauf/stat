@@ -99,7 +99,7 @@ class StatzAfoot:
         Returns:
             float: R (= x_{max} - x_{min})
         """
-        return max(list) - min(lst)
+        return max(lst) - min(lst)
         
     
     
