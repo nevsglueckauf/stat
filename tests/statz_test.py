@@ -4,7 +4,7 @@ import unittest
 
 
 class TestStatPy(unittest.TestCase):
-    """Unit testing StatPy class versus statistics"""
+    """ Unit testing StatPy class versus statistics.* """
 
     def test_median(self):
         

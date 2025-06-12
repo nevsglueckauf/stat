@@ -3,16 +3,16 @@ import matplotlib.pyplot as plt
 from scipy.stats import norm
 
 # Parameter der normalverteilung  
-# mittelwert μ
-mu = 166 # erwartungswert = mittelwert (Körpergröße Frauen Deutschland )
-sigma = 10 # Standardabweichung
+# 
+mu = 166 # Mittelwert μ  (Körpergröße Frauen Deutschland )
+sigma = 10 # Standardabweichung σ
 
 # Dichtefunktion, also hier Normalverteilung 
 x = np.linspace(mu - 4 * sigma, mu + 4 * sigma, 1000) 
-pdf = norm.pdf(x, mu, sigma) # PROPABILITY DENSITY FUNCTION (Wahrscheinlichkeitsdichtefunktion)
+pdf = norm.pdf(x, mu, sigma) # Probability density function (Wahrscheinlichkeitsdichtefunktion)
 
-# Wahrscheinlichkeit P(X >= 180)
-x_threshold = 180
+# Wahrscheinlichkeit P(X >= 191)
+x_threshold = 191
 prob_ge_threshold = norm.sf(x_threshold, mu, sigma) # Survival Funktion später noch wichtig
                             
 # Plot 

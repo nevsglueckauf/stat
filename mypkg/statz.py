@@ -15,7 +15,7 @@ class StatPy:
         Returns:
             _type_: _description_
             
-        FIXME test auf mehrfache modi! 
+        FIXME Test auf mehrfache modi! 
         """
         ctd = Counter(lst)
         

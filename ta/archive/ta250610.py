@@ -1,4 +1,4 @@
-from textfoo import Texitfy
+from mypkg.textify import Texitfy
 import statistics
 
 def clc_med(mylist:list):
