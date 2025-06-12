@@ -9,25 +9,17 @@ class StatzAfoot:
     
     """
     @staticmethod
-    def mode(lst:list):
+    def mode(lst:list) ->list:
         """ Berechnet den Modus 
         Args:
             lst (list): Liste mit Zahlen, deren Modus/Modi ermittelt werden soll
 
         Returns:
-            _type_: _description_
-            
-        FIXME Test auf mehrfache modi! 
+            _type_: list of values, occuring the most in dta
         """
         ctd = Counter(lst)
-        
-        max = 0
-        max_idx = 0
-        for i, v in ctd.items():
-            if v > max:
-                max = v
-                max_id = i
-        return max_id
+        max_id = max(ctd.values())
+        return [k for (k, v) in ctd.items() if v == max_id]
     
     @staticmethod
     def med(lst:list) ->float:
@@ -94,8 +86,15 @@ class StatzAfoot:
         Returns:
             float: _description_
         """
-        mean = sum(lst) / len(lst)
+        mean = StatzAfoot.avg(lst) # Mittel nur 1 x berechnen
         return sum((x - mean) ** 2 for x in lst) / (len(lst) - 1)
+    
+    @staticmethod
+    def st_rng(lst:list) ->float:
+        """ Berechnet die Spannweite (statistics range)
+        """
+        return max(list) - min(lst)
+        
     
     
     
