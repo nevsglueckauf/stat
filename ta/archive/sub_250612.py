@@ -20,6 +20,14 @@ from collections import Counter
 # print(StatzAfoot.avg(y))
 # print(StatzAfoot.avg(z))
 
-dta = [4,3,1,4,3,2,3,1,2]
-cnt = Counter(dta)
-print(StatzAfoot.mode(dta))
+# dta = [4,3,1,4,3,2,3,1,2]
+# cnt = Counter(dta)
+# print(StatzAfoot.mode(dta))
+
+
+# Quantile
+
+dta = [-3, -2, -1, 0, 1, 2, 3]
+
+print(statistics.quantiles(dta, n=2)) # n= Teilung
+print(statistics.quantiles(dta, n=3)) # n= Teilung

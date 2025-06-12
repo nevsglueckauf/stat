@@ -63,5 +63,12 @@ $ R = x_{max} - x_{min} $
     
 
 </dd>    
+<dt>Quantile</dt>
+<dd>
+$ R = x_{max} - x_{min} $
 
+    - $ R = x_{max} - x_{min} $
+    
+
+</dd>    
 </dl>
