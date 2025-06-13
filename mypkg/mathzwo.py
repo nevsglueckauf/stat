@@ -15,7 +15,7 @@ class MathZwo:
         Returns:
             int: Fakultät von n
         """
-        if(n==0) or (n==1):
+        if(n==0) or (n==1): 
             return 1
         else:
             return n * MathZwo.factorial(n-1)
