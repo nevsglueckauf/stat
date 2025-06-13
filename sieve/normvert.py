@@ -11,8 +11,8 @@ sigma = 10 # Standardabweichung σ
 x = np.linspace(mu - 4 * sigma, mu + 4 * sigma, 1000) 
 pdf = norm.pdf(x, mu, sigma) # Probability density function (Wahrscheinlichkeitsdichtefunktion)
 
-# Wahrscheinlichkeit P(X >= 191)
-x_threshold = 191
+# Wahrscheinlichkeit P(X >= 171)
+x_threshold = 166
 prob_ge_threshold = norm.sf(x_threshold, mu, sigma) # Survival Funktion später noch wichtig
                             
 # Plot 
