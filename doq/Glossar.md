@@ -6,7 +6,7 @@ $ R = x_{max} - x_{min} $
 
 ## Externe Referenzen
 
-* [DATAtab](https://datatab.de/tutorial/standardabweichung-varianz-spannweite)
+* [DATAtab](https://datatab.de/tutorial/standardabweichung-varianz-spannw0eite)
 <dl>
  <dt>Relative Häufigkeit (Bezug: Data Science)</dt>
  <dd>En: <var>Relative frequency</var>
