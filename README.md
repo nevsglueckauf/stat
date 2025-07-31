@@ -6,12 +6,6 @@ Statistik-Foo
 
 - Hier: auf de
 
-### Tagesaufagen ```ta/```
-
-Erledigte 'wandern' zu ```ta/archive```
-
-- <kbd>sub_{YYMMDD.py}</kbd> enthält das Tages-„subject“
-- <kbd>nb_{YYMMDD.py}</kbd> enthält das Tages-„notebook“
 
 ## Extrakte 
 
