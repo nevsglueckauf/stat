@@ -1,0 +1,22 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+import matplotlib # due to bug on MacOS
+
+matplotlib.use('TkAgg') # due to bug on MacOS
+
+dots = sns.load_dataset("dots") # .query("align == 'dots'")
+print(dots.head(), len(dots))
+
+# Define the palette as a list to specify exact values
+palette = sns.color_palette("rocket_r")
+
+# Plot the lines on two facets
+sns.relplot(
+    data=dots,
+    x="time", y="firing_rate",
+    hue="coherence", size="choice", col="align",
+    kind="line", size_order=["T1", "T2"], palette=palette,
+    height=5, aspect=.75, facet_kws=dict(sharex=False),
+)
+
+plt.show()
